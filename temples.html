@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+
+  <!-- Google Fonts example -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Mobile first CSS -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <!-- Larger screen CSS -->
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
+  <!-- Deferred JS -->
+  <script defer src="scripts/temples.js"></script>
+</head>
+<body>
+
+  <header>
+    <h2>Temple Album</h2>
+    <nav id="nav-menu">
+      <button id="hamburger" aria-label="Toggle menu">☰</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Temple Collection</h1>
+    
+    <div class="album-grid">
+      <!-- Example figure -->
+      <figure>
+        <img src="images/temple1.jpg" alt="Temple 1" />
+        <figcaption>Temple Name 1</figcaption>
+      </figure>
+
+      <!-- Repeat figure for 9 temples -->
+      <!-- You can use placeholders or your own images -->
+      <figure>
+        <img src="images/temple2.jpg" alt="Temple 2" />
+        <figcaption>Temple Name 2</figcaption>
+      </figure>
+
+      <!-- Add 7 more figures -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name. Last updated: <span id="lastModified"></span>.</p>
+  </footer>
+
+</body>
+</html>
