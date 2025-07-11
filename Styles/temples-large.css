@@ -1,15 +1,15 @@
 @media (min-width: 40rem) {
   nav ul {
-    display: flex !important; /* Show menu */
+    display: flex !important;
     gap: 1.5rem;
   }
 
   #hamburger {
-    display: none; /* Hide hamburger on large */
+    display: none;
   }
 
   .album-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Multi-column */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
   }
 
