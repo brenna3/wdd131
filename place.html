@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Country Page - United States Of America</title>
+  <link rel="stylesheet" href="place.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to United States Of America</h1>
+  </header>
+
+  <main>
+    <!-- Hero Image with srcset for responsiveness -->
+    <picture>
+      <source srcset="images/hero-small.webp" media="(max-width: 600px)" type="image/webp" />
+      <source srcset="images/hero-medium.webp" media="(max-width: 1024px)" type="image/webp" />
+      <img src="images/hero-large.webp" alt="[Country] landscape" />
+    </picture>
+
+    <section id="about">
+      <h2>About United States Of America</h2>
+      <p>The United States of America is a diverse and influential country located in North America, known for its rich history, cultural variety, and global impact. It is made up of 50 states and is home to over 330 million people. From the natural beauty of national parks like Yellowstone and the Grand Canyon to iconic cities like New York, Los Angeles, and Washington, D.C., the U.S. offers a wide range of landscapes and experiences. As a global leader in technology, entertainment, and politics, the United States continues to shape the world in many ways.</p>
+    </section>
+
+    <section id="weather">
+      <h2>Weather <span class="weather-icon-desktop" aria-hidden="true">⛅</span></h2>
+      <!-- For mobile, the weather SVG icon will be added via CSS pseudo-element -->
+      <p>Temperature: <span id="temperature">8°C</span></p>
+      <p>Wind Speed: <span id="windSpeed">10 km/h</span></p>
+      <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Brennan Leigh Nery. Last updated: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

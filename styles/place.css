@@ -1,0 +1,93 @@
+/* Global CSS Variables */
+:root {
+  --primary-color: #004d40; /* Example: Deep green for nature */
+  --secondary-color: #a7ffeb;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --weather-icon-color: #ffb300;
+}
+
+/* Basic Reset and Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hero image responsive sizing */
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Weather Section */
+#weather {
+  margin-top: 2rem;
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Weather icon - desktop pseudo element */
+.weather-icon-desktop {
+  color: var(--weather-icon-color);
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Mobile weather icon - SVG via pseudo-element */
+@media (max-width: 600px) {
+  #weather h2 {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  #weather h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/weather-icon.svg'); /* Your SVG icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* Hide the desktop emoticon on small screens */
+  .weather-icon-desktop {
+    display: none;
+  }
+}
+
+/* Media query example for layout or typography adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  main {
+    max-width: 100%;
+  }
+}
