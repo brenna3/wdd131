@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+
+  <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+
+  <header>
+    <h2>Temple Album</h2>
+    <nav id="nav-menu">
+      <button id="hamburger" aria-label="Toggle menu">☰</button>
+      <ul>
+        <li><a href="#" id="filter-home">Home</a></li>
+        <li><a href="#" id="filter-old">Old</a></li>
+        <li><a href="#" id="filter-new">New</a></li>
+        <li><a href="#" id="filter-large">Large</a></li>
+        <li><a href="#" id="filter-small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Temple Collection</h1>
+
+    <div class="album-grid">
+      <!-- Temple cards will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Brenna Leigh Nery. Last updated: <span id="lastModified"></span>.</p>
+  </footer>
+
+</body>
+</html>
