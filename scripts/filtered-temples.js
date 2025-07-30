@@ -64,28 +64,28 @@ const temples = [
     location: "Sydney, Australia",
     dedicated: "1984, September, 20",
     area: 32000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sydney-australia/400x250/sydney-australia-temple-1444944-wallpaper.jpg"
+    imageUrl: "images/temple12.jpg"
   },
   {
     templeName: "Tokyo Japan",
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 38500,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-1451227-wallpaper.jpg"
+    imageUrl: "images/temple10.jpg"
   },
   {
     templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 12000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-1467928-wallpaper.jpg"
+    imageUrl: "images/temple11.jpg"
   },
   {
     templeName: "Bern Switzerland",
     location: "Bern, Switzerland",
     dedicated: "1955, September, 11",
     area: 12000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-1.jpg"
+    imageUrl: "images/temple13.jpg"
   }
 ];
 

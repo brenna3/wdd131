@@ -97,7 +97,8 @@ figure:hover {
 
 figure img {
   width: 100%;
-  height: auto;
+  height: 250px;       /* fixed height for uniform image size */
+  object-fit: cover;   /* cover and crop to fill container */
   display: block;
 }
 
