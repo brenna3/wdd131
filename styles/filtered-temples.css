@@ -35,7 +35,6 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
 }
 
 nav ul li a:hover {
@@ -53,7 +52,7 @@ nav ul li a:hover {
 }
 
 main {
-  max-width: 900px;
+  max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
   text-align: center;
@@ -67,9 +66,8 @@ main h1 {
 .album-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
   justify-items: center;
-  padding-bottom: 2rem;
 }
 
 figure {
@@ -79,11 +77,8 @@ figure {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   max-width: 250px;
-  transition: transform 0.3s ease;
-}
-
-figure:hover {
-  transform: scale(1.03);
+  text-align: left;
+  padding-bottom: 1rem;
 }
 
 figure img {
@@ -93,10 +88,10 @@ figure img {
 }
 
 figcaption {
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   font-weight: 600;
-  text-align: left;
   color: #2a3d66;
+  line-height: 1.4;
 }
 
 footer {
@@ -105,24 +100,4 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-}
-
-/* Show nav menu when toggled */
-nav ul.show {
-  display: block;
-}
-
-/* Responsive adjustments */
-@media (min-width: 600px) {
-  nav ul {
-    display: flex !important;
-  }
-
-  nav ul li {
-    margin: 0 1rem;
-  }
-
-  #hamburger {
-    display: none;
-  }
 }
