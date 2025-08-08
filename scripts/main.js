@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(
         item => `
       <section class="feature-section" aria-label="${item.name}">
-        <img src="${item.image}" alt="${item.name}" class="feature-image" />
+        <img src="${item.image}" alt="${item.name}" class="feature-image loading="lazy" />
         <div class="feature-description">
           <h3>${item.name}</h3>
           <p>${item.description}</p>
