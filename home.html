@@ -10,47 +10,50 @@
   <header class="site-header">
     <div class="logo">Brew & Bean</div>
 
-    <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
-      &#9776;
-    </button>
-
     <nav class="site-nav" id="site-nav">
       <a href="home.html">Home</a>
       <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
-      <a href="references.html">References</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <div class="header-icons">
+      <button aria-label="Search">🔍</button>
+      <button aria-label="Cart">🛒</button>
+    </div>
+
+    <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      ☰
+    </button>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
+    <img src="images/table.jpg" alt="Hero background" class="hero-image" />
     <div class="hero-text">
-      <h1>Welcome to Brew & Bean</h1>
-      <p>Your cozy local café serving artisan coffee brewed to perfection. Come enjoy our warm atmosphere and hand-crafted drinks.</p>
-      <button class="btn-primary" onclick="location.href='about.html'">Learn More</button>
-    </div>
-    <div class="hero-image">
-      <img src="images/table.jpg" alt="Coffee cup on table" />
+      <h1>Product Description</h1>
+      <p>Come enjoy our warm atmosphere and hand-crafted drinks.</p>
+      <a href="about.html" class="btn-primary">Learn More</a>
     </div>
   </section>
 
-  <main class="feature-sections">
-    <article class="feature">
-      <img src="images/cofeebeans.jpg" alt="Fresh Beans" />
-      <h2>Fresh Beans</h2>
-      <p>We source only the finest beans to brew your perfect cup.</p>
-    </article>
-    <article class="feature">
-      <img src="images/cofeeshop.jpg" alt="Cozy Ambiance" />
-      <h2>Cozy Ambiance</h2>
-      <p>Relax in our warm and welcoming space designed for comfort.</p>
-    </article>
-    <article class="feature">
-      <img src="images/event.jpg" alt="Community Events" />
-      <h2>Community Events</h2>
-      <p>Join us for regular events, tastings, and local gatherings.</p>
-    </article>
-  </main>
+  <!-- Feature Tiles -->
+  <section class="features">
+    <h2 class="features-title">Explore Our Menu</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="images/cofeebeans.jpg" alt="Fresh Beans" />
+        <h3>Fresh Beans</h3>
+      </div>
+      <div class="feature-card">
+        <img src="images/cofeeshop.jpg" alt="Cozy Ambiance" />
+        <h3>Cozy Ambiance</h3>
+      </div>
+      <div class="feature-card">
+        <img src="images/event.jpg" alt="Community Events" />
+        <h3>Community Events</h3>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Brew & Bean Café. All rights reserved.</p>
