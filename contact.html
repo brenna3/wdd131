@@ -5,39 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brew & Bean - Contact</title>
   <link rel="stylesheet" href="styles/main.css" />
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <header class="site-header">
-  <div class="logo">Brew & Bean</div>
+    <div class="logo">Brew & Bean</div>
 
-  <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
-    &#9776;
-  </button>
+    <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      &#9776;
+    </button>
 
-  <nav class="site-nav" id="site-nav">
-     <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="references.html">References</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const siteNav = document.getElementById('site-nav');
-
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    siteNav.classList.toggle('active');
-  });
-</script>
+    <nav class="site-nav" id="site-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="references.html">References</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <main style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
     <h1 style="color: #5e3c24; text-align: center; margin-bottom: 2rem;">Contact Us</h1>
 
-    <form action="#" method="post" style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <form id="contactForm" action="#" method="post" style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <label for="name" style="display:block; margin-bottom: 0.5rem; font-weight: 600; color: #5e3c24;">Name:</label>
       <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px;" />
 
@@ -49,6 +39,8 @@
 
       <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
     </form>
+
+    <p id="confirmation" style="margin-top: 1rem; color: green; font-weight: bold;"></p>
 
     <section style="margin-top: 3rem; color: #555; font-size: 1rem;">
       <h2 style="color: #5e3c24;">Visit Us</h2>

@@ -5,54 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brew & Bean - Menu</title>
   <link rel="stylesheet" href="styles/main.css" />
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <header class="site-header">
-  <div class="logo">Brew & Bean</div>
+    <div class="logo">Brew & Bean</div>
 
-  <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
-    &#9776;
-  </button>
+    <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      &#9776;
+    </button>
 
-  <nav class="site-nav" id="site-nav">
-     <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="references.html">References</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav class="site-nav" id="site-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="references.html">References</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const siteNav = document.getElementById('site-nav');
-
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    siteNav.classList.toggle('active');
-  });
-</script>
-
-  <main class="feature-sections" style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
+  <main style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
     <h1 style="color: #5e3c24; text-align: center; margin-bottom: 2rem;">Our Menu</h1>
 
-    <article class="feature">
-      <img src="images/coffee1.jpg" alt="Espresso" />
-      <h2>Espresso</h2>
-      <p>Rich, bold espresso shot made from freshly ground beans.</p>
-    </article>
-    <article class="feature">
-      <img src="images/coffee2.jpg" alt="Latte" />
-      <h2>Latte</h2>
-      <p>Creamy steamed milk with a perfect espresso base.</p>
-    </article>
-    <article class="feature">
-      <img src="images/coffee3.jpg" alt="Cappuccino" />
-      <h2>Cappuccino</h2>
-      <p>Espresso with frothy steamed milk and a sprinkle of cocoa.</p>
-    </article>
-    <!-- Add more menu items here -->
+    <label for="filter" style="font-weight: 600; color: #5e3c24;">Filter by Category:</label>
+    <select id="filter" style="margin: 0 0 1.5rem 0; padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;">
+      <option value="all">All</option>
+      <option value="coffee">Coffee</option>
+      <option value="tea">Tea</option>
+      <option value="pastry">Pastry</option>
+    </select>
+
+    <div id="menu-items" class="feature-sections">
+      <!-- Menu items will be injected here by main.js -->
+    </div>
   </main>
 
   <footer>
