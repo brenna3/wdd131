@@ -1,3 +1,4 @@
+// === Product Array ===
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
   { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -6,10 +7,25 @@ const products = [
   { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
+// === Dynamically Populate Product Select Menu ===
 const selectElement = document.getElementById("productName");
+
 products.forEach(product => {
   const option = document.createElement("option");
   option.value = product.id;
   option.textContent = product.name;
   selectElement.appendChild(option);
+});
+
+
+// === Track Number of Reviews Using localStorage ===
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function () {
+  let reviewCount = localStorage.getItem("reviewCount");
+  reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+  localStorage.setItem("reviewCount", reviewCount);
+
+  // Optional: console log confirmation
+  console.log(`You have submitted ${reviewCount} review(s).`);
 });
