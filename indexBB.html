@@ -2,38 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Welcome to Brew & Bean Café – artisan coffee, fresh menu, and a cozy atmosphere." />
-  <meta name="author" content="Your Name" />
-  <title>Brew & Bean - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brew & Bean - Homepage</title>
   <link rel="stylesheet" href="styles/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="logo">Brew & Bean</div>
+    <nav class="site-nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Welcome to Brew & Bean</h1>
-    <p>Where comfort meets caffeine. Explore our artisan drinks, house-made pastries, and friendly community vibe.</p>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Brew & Bean</h1>
+      <p>Your cozy local café serving artisan coffee brewed to perfection. Come enjoy our warm atmosphere and hand-crafted drinks.</p>
+      <button class="btn-primary">Learn More</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/coffee-cup.jpg" alt="Coffee cup on table" />
+    </div>
+  </section>
 
-    <section id="featured-drink">
-      <h2>Drink of the Day</h2>
-      <div class="drink-container"></div>
-    </section>
+  <main class="feature-sections">
+    <article class="feature">
+      <img src="images/feature1.jpg" alt="Feature 1" />
+      <h2>Fresh Beans</h2>
+      <p>We source only the finest beans to brew your perfect cup.</p>
+    </article>
+    <article class="feature">
+      <img src="images/feature2.jpg" alt="Feature 2" />
+      <h2>Cozy Ambiance</h2>
+      <p>Relax in our warm and welcoming space designed for comfort.</p>
+    </article>
+    <article class="feature">
+      <img src="images/feature3.jpg" alt="Feature 3" />
+      <h2>Community Events</h2>
+      <p>Join us for regular events, tastings, and local gatherings.</p>
+    </article>
   </main>
 
   <footer>
-    <p>&copy; 2025 Brew & Bean</p>
-    <p><a href="references.html">References</a></p>
+    <p>&copy; 2025 Brew & Bean Café. All rights reserved.</p>
   </footer>
-  <script src="scripts/main.js"></script>
 </body>
 </html>
