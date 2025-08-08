@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'tea',
       description: 'Refreshing and soothing green tea.',
       price: '$3.00',
-      image: 'images/green.jpg',
+      image: 'images/greentea.jpg',
     },
     {
       id: 4,
