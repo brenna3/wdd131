@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderMenuItems(filter = 'all') {
     if (!menuItemsContainer) return;
 
-    let filteredItems =
+    const filteredItems =
       filter === 'all' ? menuItems : menuItems.filter(item => item.category === filter);
 
     menuItemsContainer.innerHTML = filteredItems
@@ -98,9 +98,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial menu render on page load
   renderMenuItems();
 
-  // Contact form handling
+  // Contact form handling with localStorage
   const contactForm = document.getElementById('contactForm');
   const confirmation = document.getElementById('confirmation');
+
+  // Load saved form data from localStorage if available
+  if (contactForm) {
+    const savedData = JSON.parse(localStorage.getItem('contactFormData'));
+    if (savedData) {
+      contactForm.name.value = savedData.name || '';
+      contactForm.email.value = savedData.email || '';
+      contactForm.message.value = savedData.message || '';
+    }
+  }
 
   if (contactForm && confirmation) {
     contactForm.addEventListener('submit', e => {
@@ -124,11 +134,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Here you can add actual submission logic, e.g. fetch API to backend
+      // Save form data to localStorage
+      const formData = { name, email, message };
+      localStorage.setItem('contactFormData', JSON.stringify(formData));
 
-      confirmation.textContent = `Thank you, ${name}! Your message has been sent.`;
+      confirmation.textContent = `Thank you, ${name}, for reaching out! We will get back to you soon.`;
       confirmation.style.color = 'green';
 
+      // Optionally reset form after submission
       contactForm.reset();
     });
   }
