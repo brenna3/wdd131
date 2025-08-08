@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brew & Bean menu featuring artisan coffee, pastries, and seasonal specials." />
+  <meta name="author" content="Your Name" />
+  <title>Brew & Bean - Menu</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Menu</h1>
+    <label for="filter">Filter by Category:</label>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="coffee">Coffee</option>
+      <option value="tea">Tea</option>
+      <option value="pastry">Pastry</option>
+    </select>
+
+    <div id="menu-items" class="menu-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Brew & Bean</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Brew & Bean – contact info, location, and feedback form." />
+  <meta name="author" content="Your Name" />
+  <title>Brew & Bean - Contact</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <p>Come visit us at 123 Main St, Brewtown or send us a message below.</p>
+
+    <form id="contactForm">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="type">Feedback Type</label>
+      <select id="type" name="type">
+        <option value="general">General</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="complaint">Complaint</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p id="confirmation"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Brew & Bean</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
