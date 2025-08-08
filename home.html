@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brew & Bean - Homepage</title>
-  <link rel="stylesheet" href="styles/main.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo">Brew & Bean</div>
-    <nav class="site-nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+<header class="site-header">
+  <div class="logo">Brew & Bean</div>
+
+  <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+    &#9776;
+  </button>
+
+  <nav class="site-nav" id="site-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="references.html">References</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const siteNav = document.getElementById('site-nav');
+
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    siteNav.classList.toggle('active');
+  });
+</script>
 
   <section class="hero">
     <div class="hero-text">
