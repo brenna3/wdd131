@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'tea',
       description: 'Refreshing and soothing green tea.',
       price: '$3.00',
-      image: 'images/green_tea.jpg',
+      image: 'images/green.jpg',
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'tea',
       description: 'Spiced tea with steamed milk.',
       price: '$4.50',
-      image: 'images/chai_latte.jpg',
+      image: 'images/chai.jpg',
     },
     {
       id: 5,
