@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review</title>
+  <meta name="description" content="Submit a product review, rate its features, and share your experience.">
+  <meta name="author" content="Brenna Nery Washington">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css" />
-  <meta name="description" content="Submit a product review including rating, date of installation, and comments." />
 </head>
 <body>
   <main>
     <h1>Product Review</h1>
     <form method="get" action="review.html">
-      <!-- Product Name -->
       <label for="productName">Product Name</label>
       <select id="productName" name="productName" required>
         <option value="" disabled selected>Select a Product ...</option>
       </select>
 
-      <!-- Overall Rating -->
       <fieldset>
         <legend>Overall Rating</legend>
         <label><input type="radio" name="rating" value="1" required /> ☆</label>
@@ -27,11 +28,10 @@
         <label><input type="radio" name="rating" value="5" /> ☆☆☆☆☆</label>
       </fieldset>
 
-      <!-- Installation Date -->
+
       <label for="installDate">Date of Installation</label>
       <input type="date" id="installDate" name="installDate" required />
 
-      <!-- Features -->
       <fieldset>
         <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
         <label><input type="checkbox" name="features" value="durability" /> Durability</label>
@@ -40,15 +40,15 @@
         <label><input type="checkbox" name="features" value="design" /> Design</label>
       </fieldset>
 
-      <!-- Written Review -->
+  
       <label for="review">Written Review <span class="optional">(Optional)</span></label>
       <textarea id="review" name="review"></textarea>
 
-      <!-- Name -->
+ 
       <label for="username">Your Name <span class="optional">(Optional)</span></label>
       <input type="text" id="username" name="username" />
 
-      <!-- Submit -->
+    
       <input type="submit" value="Post Review" />
     </form>
   </main>
@@ -58,10 +58,9 @@
     <p>Last Modification: <span id="lastMod"></span></p>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="script/form.js"></script>
   <script>
-    // Update last modified date
+  
     document.getElementById("lastMod").textContent = document.lastModified;
   </script>
 </body>
