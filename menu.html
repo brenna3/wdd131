@@ -2,41 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Brew & Bean menu featuring artisan coffee, pastries, and seasonal specials." />
-  <meta name="author" content="Your Name" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brew & Bean - Menu</title>
   <link rel="stylesheet" href="styles/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="logo">Brew & Bean</div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="references.html">References</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Our Menu</h1>
-    <label for="filter">Filter by Category:</label>
-    <select id="filter">
-      <option value="all">All</option>
-      <option value="coffee">Coffee</option>
-      <option value="tea">Tea</option>
-      <option value="pastry">Pastry</option>
-    </select>
+  <main class="feature-sections" style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
+    <h1 style="color: #5e3c24; text-align: center; margin-bottom: 2rem;">Our Menu</h1>
 
-    <div id="menu-items" class="menu-grid"></div>
+    <article class="feature">
+      <img src="images/coffee1.jpg" alt="Espresso" />
+      <h2>Espresso</h2>
+      <p>Rich, bold espresso shot made from freshly ground beans.</p>
+    </article>
+    <article class="feature">
+      <img src="images/coffee2.jpg" alt="Latte" />
+      <h2>Latte</h2>
+      <p>Creamy steamed milk with a perfect espresso base.</p>
+    </article>
+    <article class="feature">
+      <img src="images/coffee3.jpg" alt="Cappuccino" />
+      <h2>Cappuccino</h2>
+      <p>Espresso with frothy steamed milk and a sprinkle of cocoa.</p>
+    </article>
+    <!-- Add more menu items here -->
   </main>
 
   <footer>
-    <p>&copy; 2025 Brew & Bean</p>
-    <p><a href="references.html">References</a></p>
+    <p>&copy; 2025 Brew & Bean Café. All rights reserved.</p>
   </footer>
-  <script src="scripts/main.js"></script>
 </body>
 </html>
