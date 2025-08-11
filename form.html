@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Review</title>
-  <meta name="description" content="Submit a product review, rate its features, and share your experience.">
-  <meta name="author" content="Brenna Nery">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Submit a product review, rate its features, and share your experience." />
+  <meta name="author" content="Brenna Nery" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/form.css" />
 </head>
 <body>
   <main>
     <h1>Product Review</h1>
     <form method="get" action="review.html">
-      <label for="productName">Product Name</label>
+      <!-- Product Name -->
+      <label for="productName">Product Name <span aria-hidden="true">*</span></label>
       <select id="productName" name="productName" required>
         <option value="" disabled selected>Select a Product ...</option>
       </select>
 
+      <!-- Overall Rating -->
       <fieldset>
-        <legend>Overall Rating</legend>
-        <label><input type="radio" name="rating" value="1" required /> ☆</label>
-        <label><input type="radio" name="rating" value="2" /> ☆☆</label>
-        <label><input type="radio" name="rating" value="3" /> ☆☆☆</label>
-        <label><input type="radio" name="rating" value="4" /> ☆☆☆☆</label>
-        <label><input type="radio" name="rating" value="5" /> ☆☆☆☆☆</label>
+        <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+        <label for="rating1"><input type="radio" id="rating1" name="rating" value="1" required /> ☆</label>
+        <label for="rating2"><input type="radio" id="rating2" name="rating" value="2" /> ☆☆</label>
+        <label for="rating3"><input type="radio" id="rating3" name="rating" value="3" /> ☆☆☆</label>
+        <label for="rating4"><input type="radio" id="rating4" name="rating" value="4" /> ☆☆☆☆</label>
+        <label for="rating5"><input type="radio" id="rating5" name="rating" value="5" /> ☆☆☆☆☆</label>
       </fieldset>
 
-
-      <label for="installDate">Date of Installation</label>
+      <!-- Install Date -->
+      <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
       <input type="date" id="installDate" name="installDate" required />
 
+      <!-- Features -->
       <fieldset>
         <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
-        <label><input type="checkbox" name="features" value="durability" /> Durability</label>
-        <label><input type="checkbox" name="features" value="ease" /> Ease of Use</label>
-        <label><input type="checkbox" name="features" value="performance" /> Performance</label>
-        <label><input type="checkbox" name="features" value="design" /> Design</label>
+        <label for="durability"><input type="checkbox" id="durability" name="features" value="durability" /> Durability</label>
+        <label for="ease"><input type="checkbox" id="ease" name="features" value="ease" /> Ease of Use</label>
+        <label for="performance"><input type="checkbox" id="performance" name="features" value="performance" /> Performance</label>
+        <label for="design"><input type="checkbox" id="design" name="features" value="design" /> Design</label>
       </fieldset>
 
-  
+      <!-- Review -->
       <label for="review">Written Review <span class="optional">(Optional)</span></label>
       <textarea id="review" name="review"></textarea>
 
- 
+      <!-- User Name -->
       <label for="username">Your Name <span class="optional">(Optional)</span></label>
       <input type="text" id="username" name="username" />
 
-    
+      <!-- Submit -->
       <input type="submit" value="Post Review" />
     </form>
   </main>
@@ -58,9 +60,8 @@
     <p>Last Modification: <span id="lastMod"></span></p>
   </footer>
 
-  <script src="script/form.js"></script>
+  <script src="scripts/form.js"></script>
   <script>
-  
     document.getElementById("lastMod").textContent = document.lastModified;
   </script>
 </body>
